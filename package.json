@@ -1,0 +1,35 @@
+{
+  "name": "expressjs-boilerplate",
+  "version": "1.0.0",
+  "description": "Express Js Boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app/server.js",
+    "debug": "nodemon --inspect app/server.js 80",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vjnathe-webonise/expressjs-boilerplate.git"
+  },
+  "keywords": [
+    "ExpressJs",
+    "NodeJs",
+    "Boilerplate"
+  ],
+  "author": "Vijayraj Nathe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vjnathe-webonise/expressjs-boilerplate/issues"
+  },
+  "homepage": "https://github.com/vjnathe-webonise/expressjs-boilerplate#readme",
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "^4.16.3",
+    "pug": "2.0.0-beta11"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  }
+}
