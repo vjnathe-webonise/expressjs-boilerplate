@@ -1,38 +1,31 @@
-const DailyRotateFile = require('winston-daily-rotate-file');
+var winston = require('winston');
+require('winston-daily-rotate-file');
+
+const levels = {
+  error: 0,
+  warn: 1,
+  info: 2,
+  verbose: 3,
+  debug: 4,
+  silly: 5
+}
+
+var transport = new (winston.transports.DailyRotateFile)({
+    filename: 'logs/application-%DATE%.log',
+    datePattern: 'YYYY-MM-DD',
+    zippedArchive: true,
+    maxSize: '20m',
+    maxFiles: '30d'
+});
 
 
-var options = {
-  file: {
+var logger = winston.createLogger({
     level: 'info',
-    filename: `${appRoot}/logs/app.log`,
-    handleExceptions: true,
-    json: true,
-    maxsize: 5242880, // 5MB
-    maxFiles: 5,
-    colorize: false,
-  },
-  console: {
-    level: 'debug',
-    handleExceptions: true,
-    json: false,
-    colorize: true,
-  },
-};
-
-const logger = winston.createLogger({
-  level: 'info',
-  transports: [
-    new winston.transports.Console(),
-    new winston.transports.File({ filename: 'combined.log' })
-  ]
+    levels,
+    transports: [
+        transport
+    ],
+    exitOnError: false
 });
-
-logger.configure({
-  level: 'verbose',
-  transports: [
-    new DailyRotateFile(opts)
-  ]
-});
-
 
 module.exports = logger;
