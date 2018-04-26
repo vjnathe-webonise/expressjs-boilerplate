@@ -5,10 +5,14 @@ var indexRouter = require('./routes');
 var app = express();
 var winston = require('../configs/winston-config');
 var helmet = require('helmet');
+var compression = require('compression');
 
-/*Helmet can help protect app from some well-known web
+/* Helmet can help protect app from some well-known web
 vulnerabilities by setting HTTP headers appropriately.*/
 app.use(helmet());
+
+// Enabling Gzip compression
+app.use(compression());
 
 // view engine setup
 app.set('views', path.join(__dirname, '/public/views'));

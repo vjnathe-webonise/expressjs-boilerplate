@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/vjnathe-webonise/expressjs-boilerplate#readme",
   "dependencies": {
+    "compression": "^1.7.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "^4.16.3",
