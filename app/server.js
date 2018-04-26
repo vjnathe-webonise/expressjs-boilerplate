@@ -25,10 +25,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 
-/*app.use('*', (req, res) => {
-    // 404
-})*/
-
 // Error handler
 app.use((err, req, res, next) => {
     winston.error(`${err.status || 500} - ${err.message} - ${req.originalUrl} - ${req.method} - ${req.ip}`);

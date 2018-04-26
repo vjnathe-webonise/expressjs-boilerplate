@@ -8,4 +8,8 @@ router.get('/', (req, res) => {
 
 router.use('/user', userRoutes);
 
+router.all('*', (req, res) => {
+    res.status(404).send('Not found');
+});
+
 module.exports = router;
