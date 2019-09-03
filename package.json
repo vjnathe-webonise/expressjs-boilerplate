@@ -6,6 +6,7 @@
   "scripts": {
     "start": "nodemon app/server.js",
     "debug": "nodemon --inspect app/server.js 80",
+    "test-watch": "mocha --watch",
     "test": "mocha"
   },
   "repository": {
