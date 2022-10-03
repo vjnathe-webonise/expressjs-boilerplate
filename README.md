@@ -1,4 +1,9 @@
 # expressjs-boilerplate
-## STEPS:
-1) `npm install`
-2) `npm start`
+## Prerequisite:
+`npm install`
+
+## To run the app:
+`npm start`
+
+## To run the test:
+`npm run test`
