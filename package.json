@@ -28,7 +28,7 @@
     "compression": "1.7.2",
     "cookie-parser": "1.4.3",
     "debug": "2.6.9",
-    "express": "4.17.1",
+    "express": "4.17.3",
     "helmet": "^5.1.1",
     "pug": "3.0.1",
     "winston": "3.0.0-rc5",
